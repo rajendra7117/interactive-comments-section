@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import React, {useEffect, useState} from 'react'
 import './App.css';
-
+import Comments from './components/comments/Comments';
+import {useDispatch, useSelector } from 'react-redux'
+import {commentsSliceActions} from './store/CommentsSlice'
+import AddComment from './components/comments/AddComment';
 function App() {
+
+
+  const comments1 = useSelector((state) => state.comments.comments)
+ 
+  const dispacth = useDispatch()
+  const fetchComments = async () => {
+    const response = await fetch('/data.json')
+    const data = await response.json()
+
+      dispacth(commentsSliceActions.setComments(data.comments))
+  }
+ 
+
+  useEffect(() => {
+      fetchComments()
+  }, [])
+
+
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {comments1?.length>0 && ( <Comments comments={comments1}/>)}
+      <AddComment />
     </div>
   );
 }

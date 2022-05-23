@@ -1,0 +1,280 @@
+.comment{
+    width: 42rem;
+    padding: 1.4rem;
+    background-color: #ffffff;
+   border-radius: 0.4rem;
+   height: auto;
+   font-family: 'Rubik', sans-serif;
+}
+.comment-data{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+}
+.vote{
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(237, 43%, 84%);
+    height: 6rem;
+    justify-content: space-around;
+    width: 2.2rem;
+    align-items: center;
+    border-radius: 0.4rem;
+    color: #f0ecec;
+}
+.vote:hover{
+    color: hsl(238, 40%, 52%) !important;
+}
+.vote svg{
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.comment-info{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+
+}
+.you{
+    padding: 0.2rem;
+    background-color: hsl(238, 40%, 52%);
+    color: #ffffff !important;
+    border-radius: 0.1rem;
+}
+.info{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.info .details{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    
+    width: 100%;
+}
+.info .details span{
+    margin-left: 0.6rem;
+    color: #bdb6b6;
+}
+.info .details h3{
+    margin: 0 !important;
+    margin-left: 0.6rem !important;
+    font-weight: 600;
+    font-size: 17px;
+}
+.info img{
+    width: 2.2rem;
+}
+.replyingTo{
+    color: hsl(238, 40%, 52%);
+    font-weight: 600;
+}
+.reply{
+    width: 5rem;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+}
+.reply span.hovered{
+    color: #bdb6b6;
+
+}
+.reply img{
+    width: 1rem;
+    
+}
+.reply span{
+    color: hsl(238, 40%, 52%);;
+}
+
+
+.content{
+    width: 93%;
+    text-align: left;
+}
+.content p{
+    margin: 0;
+    padding: 0;
+}
+
+.replies{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #bdb6b6;
+}
+.replies .comment{
+    width: 35rem;
+    align-self: flex-end;
+}
+.update-buttons{
+    width: 10rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+}
+.update-buttons button{
+    background-color: #ffffff;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 600;
+    
+    width: 5rem;
+    cursor: pointer;
+}
+.update-buttons button:nth-child(1){
+    color: hsl(358, 79%, 66%);
+}
+.update-buttons button:nth-child(2){
+    color:   hsl(238, 40%, 52%);
+}
+.update-buttons button img{
+    width: 1rem;
+    margin-right: 3px;
+}
+.update-buttons button:hover{
+    opacity: 0.6;
+   
+}
+
+.update-button{
+    background-color: hsl(238, 40%, 52%);
+    padding: 0.5rem;
+    color: #ffffff;
+    width: 6rem;
+    font-weight: 700;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 0.4rem;
+    align-self: flex-end;
+    margin-top: 0.3rem;
+}
+.update-button:hover{
+    background-color: #bdb6b6;
+    cursor: pointer;
+}
+.modal-container{
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+.modal-container h1{
+    margin: 0;
+    padding: 0;
+    align-self: flex-start;
+    color: #bdb6b6;
+}
+.modal-container .modal-buttons{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+.modal-buttons button{
+    margin-left: 1rem;
+    color: #ffffff;
+    padding: 0.5rem;
+    font-weight: 700;
+    border-radius: 0.4rem;
+    border: none;
+    cursor: pointer;
+}
+.modal-buttons button:nth-child(1){
+    background-color: #bdb6b6;
+}
+.modal-buttons button:nth-child(2){
+    background-color: hsl(358, 79%, 66%);
+}
+
+
+@media screen and (max-width: 560px) {
+    .comment{
+        width: 95% !important;
+        border-radius: 0.5rem;
+        padding: 0.4rem;
+        
+        
+    }
+    .comment-data{
+        width: 98%;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        position: relative;
+        margin-left: 0.4rem;
+    }
+    .reply{
+        position: absolute;
+        bottom: 0.5rem;
+        right: 0.5rem;
+    }
+    .replies .comment{
+        width: 98%;
+        align-self: flex-end;
+    }
+    .info{
+        width: 100%;
+    }
+    .vote{
+        flex-direction: row;
+        height: 2rem;
+        width: 6rem;
+        margin-top: 1rem;
+    }
+    .info .details{
+        align-items: center;
+    }
+
+    .replies{
+    
+        width: 100%;
+    }
+    .comment-reply{
+      
+        width: 95% !important;
+    }
+    .comment-reply .vote{
+        bottom: 0.3rem;
+    }
+    .update-buttons{
+        height: 2rem;
+        position: absolute;
+        bottom: 0.1rem;
+        right: 0;
+    
+        
+    }
+    .update-buttons button{
+        font-size: 1rem !important;
+        margin-top: 0.1rem !important;
+        padding: 0 !important;
+    }
+    .content{
+        width: 98%;
+    }
+    .edit-text{
+        width: 98%;
+        height: 8rem;
+        border: 1px solid #000 !important;
+        border-radius: 0.3rem;
+        margin-top: 2px;
+    }
+    .edit-text:focus-within{
+        border: 1px solid hsl(238, 40%, 52%) !important;
+        outline: none;
+    }
+  
+}

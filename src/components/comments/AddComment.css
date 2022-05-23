@@ -1,0 +1,74 @@
+.comment-input{
+    width: 42rem;
+    padding: 1.4rem;
+    height: 8rem;
+    background-color: #ffffff;
+   border-radius: 0.4rem;
+   height: auto;
+   font-family: 'Rubik', sans-serif;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   margin-bottom: 2rem;
+}
+.comment-input img{
+    width: 2rem;
+}
+
+.text-field{
+    border-radius: 0.2rem;
+}
+.comment-input button{
+    background-color: hsl(238, 40%, 52%);
+    color: #ffffff;
+    border: none;
+    height: 2.5rem;
+    cursor: pointer;
+    padding: 0.3rem;
+    width: 5rem;
+    border-radius: 0.4rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.comment-input button:hover{
+    background-color: hsl(237, 43%, 84%);
+  
+    transition: all 0.1s ease-out;
+}
+
+.text-field::placeholder{
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width: 560px) {
+    .addCommentContainer{
+        width: 96%;
+    }
+    .comment-input{
+        width: 98%;
+        position: relative;
+        height: 10rem;
+        padding: 0;
+       
+    }
+    .text-field{
+        height: 5.4rem;
+        width: 90%;
+        margin-top: 0.3rem;
+    }
+    .comment-input img{
+        position: absolute;
+        bottom: 0.5rem;
+        left: 0.46rem;
+        width: 2.5rem;
+    }
+    .comment-input button{
+        position: absolute;
+        bottom: 0.5rem;
+        right: 0.3rem;
+    }
+    
+}
