@@ -13,6 +13,9 @@ const AddComment = () => {
   
     const submitHandler = e => {
         e.preventDefault()
+        if(enteredText===""){
+          return
+        }
         let comment = {
             "id": comments.length+1,
             "content": enteredText,

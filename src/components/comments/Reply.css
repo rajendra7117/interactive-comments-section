@@ -17,6 +17,13 @@
 .text-field{
     border-radius: 0.2rem;
 }
+.reply-buttons{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-content: center;
+}
 .reply-input button{
     color: #ffffff;
     border: none;
@@ -28,6 +35,7 @@
     border-radius: 0.4rem;
     border: none;
     outline: none;
+    margin-bottom: 0.2rem;
    
    
 }
@@ -46,7 +54,7 @@
 
 @media screen and (max-width: 560px) {
     .reply-input{
-        width: 91%;
+        width: 91% !important;
         position: relative;
         padding: 0.8rem;
         height: 10rem;
@@ -54,15 +62,25 @@
     .text-field{
         width: 90%;
     }
+    .reply-buttons{
+        position: absolute;
+        bottom: 0;
+        width: 18rem;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: 2.5rem;
+    }
+    .reply-buttons button{
+        margin-bottom: 0.8rem;
+    }
+   
     .reply-input img{
         position: absolute;
         bottom: 0.8rem;
         left: 0.8rem;
         width: 2.5rem;
     }
-    .reply-input button{
-        position: absolute;
-        bottom: 0.6rem;
-        right: 0.6rem;
-    }
+   
 }

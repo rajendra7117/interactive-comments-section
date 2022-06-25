@@ -28,7 +28,8 @@
 }
 .vote svg{
     cursor: pointer;
-    padding: 0.5rem;
+
+  font-size: 1.4rem;
 }
 
 .comment-info{
@@ -36,6 +37,7 @@
     display: flex;
     flex-direction: column;
     margin-left: 1rem;
+   
 
 }
 .you{
@@ -148,6 +150,13 @@
     opacity: 0.6;
    
 }
+.update-comment-buttons{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .update-button{
     background-color: hsl(238, 40%, 52%);
@@ -163,6 +172,22 @@
 }
 .update-button:hover{
     background-color: #bdb6b6;
+    cursor: pointer;
+}
+.cancel-button{
+    width: 6rem;
+    font-weight: 700;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 0.4rem;
+    padding: 0.5rem;
+margin-top: 0.3rem;
+    align-self: flex-start;
+  
+}
+.cancel-button:hover{
+    background-color: hsl(358, 79%, 66%);
+    color: #ffffff;
     cursor: pointer;
 }
 .modal-container{

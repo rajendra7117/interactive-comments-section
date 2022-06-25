@@ -36,12 +36,21 @@ const Comment = ({ comment }) => {
     if(!comment.ownComment){
       let id = editContent.indexOf(',')
       let content = editContent.substring(id+2, editContent.length)
+      if(content===""){
+        return
+      }
       dispacth(commentsSliceActions.updateComment({reply: true, parentId: comment.parentId, content: content, currentId: comment.id}))
     }
     else{
+      if(editContent===""){
+        return
+      }
       dispacth(commentsSliceActions.updateComment({reply:false, id: comment.id, content: editContent}))
     }
   
+    toggleEdit()
+  }
+  const cancelUpdate = e => {
     toggleEdit()
   }
 
@@ -70,7 +79,10 @@ const Comment = ({ comment }) => {
              <Buttons comment={comment} toggleEnterReply={toggleEnterReply} toggleEdit={toggleEdit} />
             </div>
             {edit ? <textarea rows={4} cols={70} value={editContent} onChange={handleEditChange} className="edit-text"/> :(<Content comment={comment}/>) }
-            {edit && (<button className="update-button" onClick={updateComment}>Update</button>)}
+          <div className="update-comment-buttons">
+          {edit && (<button className="update-button" onClick={updateComment}>Update</button>)}
+            {edit && (<button className="cancel-button" onClick={cancelUpdate}>Cancel</button>)}
+          </div>
           </div>
         </div>
       </div>
